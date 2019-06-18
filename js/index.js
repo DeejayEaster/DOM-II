@@ -29,21 +29,31 @@ const navHead = document.querySelector(".main-navigation");
 nav.style.marginTop = "-300px";
 const navBtn = document.querySelector(".logo-heading");
 
-// 1 Toggle Nav offscreen
+const logoText = document.querySelector(".logo-heading");
+//1 logo color over
+logoText.addEventListener("mouseover", function() {
+  logoText.style.color = randomColor();
+});
+// 2 logo color off
+logoText.addEventListener("mouseout", function() {
+  logoText.style.color = "black";
+});
+
+// 3 Toggle Nav offscreen
 navBtn.addEventListener("click", menuToggle);
 let menuStatus = false;
 
-// 2 Color Changing Nav
+// 4 Color Changing Nav
 nav.addEventListener("dblclick", function(event) {
   nav.style.backgroundColor = randomColor();
 });
 
-// 3 Color Changing Top Section
+// 5 Color Changing Top Section
 navHead.addEventListener("click", function() {
   navHead.style.background = randomColor();
 });
 
-// 4 ...and items
+// 6 ...and items
 const navItems = document.querySelectorAll("nav a");
 navItems.forEach(function(item) {
   item.addEventListener("click", function(event) {
@@ -53,7 +63,7 @@ navItems.forEach(function(item) {
   });
 });
 
-//  5 color changing buttons
+//  7 color changing buttons
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach(function(btn) {
   btn.addEventListener("mouseover", function(event) {
@@ -61,7 +71,7 @@ buttons.forEach(function(btn) {
   });
 });
 
-//  6 color changing header
+//  8 color changing header
 const header = document.querySelector(".intro");
 header.addEventListener("click", function(event) {
   event.currentTarget.style.backgroundColor = randomColor();
@@ -73,11 +83,11 @@ let ricked = true;
 rick.src =
   "http://pm1.narvii.com/6350/75953997c8fbb2766b8feb9cf347b2464df25b9c_hq.jpg";
 
-// 7
+// 9
 const imgs = document.querySelectorAll("img");
 rick.onload = function() {
   //this just makes sure the image is loaded in the background before letting you rick roll;
-  // 8
+
   imgs.forEach(function(img) {
     img.addEventListener("click", function() {
       img.src = rick.src;
@@ -85,7 +95,7 @@ rick.onload = function() {
     });
   });
 
-  // 9
+  // 10
   const body = document.querySelector("body");
   window.addEventListener("resize", function(event) {
     if (ricked) {
@@ -96,6 +106,9 @@ rick.onload = function() {
   });
 };
 
+// mooooooooooooooooooooooooore
+
+// Get help with this during standup
 const text = document.querySelectorAll("h4");
 text.addEventListener("click", function() {
   text.textContent = "I'm Pickle Rick!";
