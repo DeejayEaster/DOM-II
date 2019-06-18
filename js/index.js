@@ -108,7 +108,7 @@ rick.onload = function() {
 
 // mooooooooooooooooooooooooore
 
-// Get help with this during standup
+// Get help with this during standup // forEach because it is a node list it needs to be iterated // see above forEach examples
 const text = document.querySelectorAll("h4");
 text.addEventListener("click", function() {
   text.textContent = "I'm Pickle Rick!";
