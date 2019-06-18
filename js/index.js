@@ -91,7 +91,7 @@ rick.onload = function() {
   imgs.forEach(function(img) {
     img.addEventListener("click", function() {
       img.src = rick.src;
-      cute = true;
+      ricked = true;
     });
   });
 
